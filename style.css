@@ -1,0 +1,166 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.filters select,
+.filters input {
+  padding: 10px;
+  border-radius: 30px;
+  border: none;
+  width: 280px;
+  max-width: 90vw;
+  font-size: 1em;
+}
+
+#product-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  padding: 30px;
+}
+
+.card {
+  background: #ffffff10;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.product-title {
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.product-category {
+  font-size: 0.9em;
+  color: #ccc;
+}
+
+.product-price {
+  font-size: 1.1em;
+  color: #ffd700;
+  margin: 10px 0;
+}
+
+.buy-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #ff4c4c;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 80vh;
+  text-align: center;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 15px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+.nav-buttons {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-buttons button {
+  background-color: #ffffff33;
+  border: none;
+  color: white;
+  font-size: 2em;
+  padding: 5px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+}
+
+/* Style for prev/next buttons in modal */
+.modal .nav-buttons button {
+  background-color: whitesmoke; /* Dark blue */
+  color: grey;               /* White text */
+  border: none;
+  font-size: 24px;
+  padding: 10px 16px;
+  border-radius: 50%;
+  margin: 0 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.modal .nav-buttons button:hover {
+  background-color: white; /* Brighter blue on hover */
+  transform: scale(1.1);
+}
