@@ -1,36 +1,63 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>GetUpDeals</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GetUpDeals - Champion Strategy</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-  <header>
-    <h1>GetUpDeals</h1>
-    <div class="filters">
-      <select id="categoryFilter">
-        <option value="All">All Categories</option>
-      </select>
-      <input type="text" id="searchInput" placeholder="Search products..." />
+<body class="dark-theme">
+  <header class="top-header">
+    <div class="logo-search">
+      <h1 class="brand">🔴 GetUpDeals</h1>
+      <button class="smart-search">Smart Search</button>
+      <button class="menu-toggle">☰</button>
     </div>
-  </header>
-
-  <main id="product-gallery"></main>
-
-  <!-- Modal Gallery -->
-  <div id="modal" class="modal">
-    <span class="close" onclick="closeModal()">×</span>
-    <div class="modal-content">
-      <img id="modalImage" />
-      <div class="nav-buttons">
-        <button onclick="prevImage()">‹</button>
-        <button onclick="nextImage()">›</button>
-      </div>
+    <div class="banner-slider">
+      <img src="banner1.jpg" alt="Banner 1">
+      <img src="banner2.jpg" alt="Banner 2">
     </div>
-  </div>
+  </header>  <section class="main-categories">
+    <div class="category-avatar"><img src="icons/fashion.png" alt="Fashion"><p>Fashion</p></div>
+    <div class="category-avatar"><img src="icons/electronics.png" alt="Electronics"><p>Electronics</p></div>
+    <div class="category-avatar"><img src="icons/home.png" alt="Home"><p>Home</p></div>
+    <div class="category-avatar"><img src="icons/beauty.png" alt="Beauty"><p>Beauty</p></div>
+    <div class="category-avatar"><img src="icons/sports.png" alt="Sports"><p>Sports</p></div>
+    <div class="category-avatar"><img src="icons/appliances.png" alt="Appliances"><p>Appliances</p></div>
+  </section>  <section class="subcategories">
+    <div class="subcategory-tile"><img src="images/men.jpg" alt="Men"><p>Men</p></div>
+    <div class="subcategory-tile"><img src="images/women.jpg" alt="Women"><p>Women</p></div>
+    <div class="subcategory-tile"><img src="images/shoes.jpg" alt="Shoes"><p>Shoes</p></div>
+    <div class="subcategory-tile"><img src="images/watches.jpg" alt="Watches"><p>Watches</p></div>
+  </section>  <section class="product-sections">
+    <h2>Most Viewed Today</h2>
+    <div class="tabs">
+      <button>Most Viewed</button>
+      <button>New Arrivals</button>
+      <button>Top Rated</button>
+    </div>
+    <div class="product-grid" id="products-section"></div><h2>Editor's Picks</h2>
+<div class="product-grid" id="editors-picks"></div>
 
-  <script src="main.js"></script>
-</body>
+<h2>Based on Your Last Visit</h2>
+<div class="product-grid" id="last-visit-products"></div>
+
+  </section>  <template id="product-card-template">
+    <div class="product-card">
+      <img src="" class="product-image" alt="">
+      <p class="tag-affiliate">AFFILIATE</p>
+      <p class="urgency">🔥 Only 2 Left!</p>
+      <h4 class="title"></h4>
+      <p class="price"></p>
+      <p class="bought-info"></p>
+      <p class="rating">⭐ 4.5</p>
+      <a href="#" class="buy-button">BUY NOW</a>
+    </div>
+  </template>  <nav class="bottom-navbar">
+    <button>🏠 Home</button>
+    <button>🎁 Rewards</button>
+    <button>🔍 Search</button>
+    <button>❤️ Wishlist</button>
+    <button>👤 Account</button>
+  </nav>  <script src="main.js"></script>
+</body> 
 </html>
