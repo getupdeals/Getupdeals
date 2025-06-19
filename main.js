@@ -1,90 +1,58 @@
-let products = [];
-let currentImages = [];
-let currentImageIndex = 0;
+// Sample structure based on champion marketing strategy
 
-fetch("products.json")
-  .then(res => res.json())
+const productSections = {
+  trending: 'products-trending',
+  topRated: 'products-top-rated',
+  editors: 'products-editors',
+  recently: 'products-recently'
+};
+
+fetch('products.json')
+  .then(response => response.json())
   .then(data => {
-    products = data;
-    populateCategories(products);
-    renderProducts(products);
-  });
-
-function populateCategories(data) {
-  const categories = [...new Set(data.map(p => p.category))];
-  const filter = document.getElementById("categoryFilter");
-
-  categories.forEach(cat => {
-    const opt = document.createElement("option");
-    opt.value = cat;
-    opt.textContent = cat;
-    filter.appendChild(opt);
-  });
-
-  filter.addEventListener("change", () => {
-    applyFilters();
-  });
-
-  document.getElementById("searchInput").addEventListener("input", () => {
-    applyFilters();
-  });
-}
-
-function applyFilters() {
-  const category = document.getElementById("categoryFilter").value;
-  const search = document.getElementById("searchInput").value.toLowerCase();
-
-  const filtered = products.filter(p => {
-    const matchesCategory = category === "All" || p.category === category;
-    const matchesSearch = p.title.toLowerCase().includes(search);
-    return matchesCategory && matchesSearch;
-  });
-
-  renderProducts(filtered);
-}
-
-function renderProducts(list) {
-  const gallery = document.getElementById("product-gallery");
-  gallery.innerHTML = "";
-
-  list.forEach(product => {
-    const card = document.createElement("div");
-    card.className = "card";
-
-    card.innerHTML = `
-      <img src="${product.images[0]}" alt="${product.title}" class="main-image" />
-      <div class="product-title">${product.title}</div>
-      <div class="product-category">${product.category}</div>
-      <div class="product-price">₹${product.price}</div>
-      <a class="buy-button" href="${product.link}" target="_blank">Buy Now</a>
-    `;
-
-    card.querySelector(".main-image").addEventListener("click", () => {
-      openModal(product.images);
+    Object.entries(productSections).forEach(([key, elementId]) => {
+      const sectionProducts = getRandomProducts(data, 8);
+      renderProducts(sectionProducts, document.getElementById(elementId));
     });
-
-    gallery.appendChild(card);
   });
+
+function getRandomProducts(data, count) {
+  const shuffled = data.sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
 }
 
-// Modal Logic
-function openModal(images) {
-  currentImages = images;
-  currentImageIndex = 0;
-  document.getElementById("modalImage").src = currentImages[0];
-  document.getElementById("modal").style.display = "flex";
-}
+function renderProducts(products, container) {
+  const template = document.getElementById('product-card-template');
 
-function closeModal() {
-  document.getElementById("modal").style.display = "none";
-}
+  products.forEach(product => {
+    const clone = template.content.cloneNode(true);
+    clone.querySelector('.main-img').src = product.images[0];
+    clone.querySelector('.product-title').textContent = product.title;
+    clone.querySelector('.product-price').textContent = `₹${product.price}`;
+    clone.querySelector('.buy-now').href = product.link;
 
-function nextImage() {
-  currentImageIndex = (currentImageIndex + 1) % currentImages.length;
-  document.getElementById("modalImage").src = currentImages[currentImageIndex];
-}
+    // Rating
+    const rating = document.createElement('div');
+    rating.className = 'rating-stars';
+    const fullStars = Math.floor(product.rating || 4);
+    for (let i = 0; i < 5; i++) {
+      const star = document.createElement('span');
+      star.innerHTML = i < fullStars ? '★' : '☆';
+      rating.appendChild(star);
+    }
+    clone.querySelector('.product-rating').appendChild(rating);
 
-function prevImage() {
-  currentImageIndex = (currentImageIndex - 1 + currentImages.length) % currentImages.length;
-  document.getElementById("modalImage").src = currentImages[currentImageIndex];
+    // Reviews
+    clone.querySelector('.product-reviews').textContent = `${product.reviews || 120}+ reviews`;
+
+    // Urgency
+    if (product.stock && product.stock <= 3) {
+      clone.querySelector('.product-urgency').textContent = `⚠️ Only ${product.stock} left! Hurry!`;
+    }
+
+    // Smart tag
+    clone.querySelector('.product-tag').textContent = product.boughtThisMonth >= 200 ? '🔥 Hot' : '⭐ Pick';
+
+    container.appendChild(clone);
+  });
 }
