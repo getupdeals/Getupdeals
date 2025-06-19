@@ -74,10 +74,10 @@
     "price": 459,
     "link": "https://amzn.to/468LdLY",
     "images": [
-      "/image 1 /61pv6kWuitL._SX679_.jpg",
-      "/image 1 /51QbcuBnNVL._SY879_.jpg",
-      "/image 1 /510Dz0EHpPL._SY879_.jpg" ,
-      "/image 1 /513OOBn4NnL._SY879_.jpg"
+      "./image1/61pv6kWuitL._SX679_.jpg",
+      "./image1/51QbcuBnNVL._SY879_.jpg",
+      "./image1/510Dz0EHpPL._SY879_.jpg" ,
+      "./image1/513OOBn4NnL._SY879_.jpg"
       
     ]
   },
