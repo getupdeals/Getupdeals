@@ -7,37 +7,27 @@
     "images": [
       "./image4/asdf1.jpg",
       "./image4/asdf2.jpg",
-      "./image4/asdf3.jpg",
-      "./image4/asdf4.jpg",
-      "./image4/asdf5.jpg",
+      "./image4/asdf3.jpg" ,
+      "./image4/asdf4.jpg" ,
+      "./image4/asdf5.jpg" ,
       "./image4/asdf6.jpg"
-    ],
-    "boughtThisMonth": 1783,
-    "avgRating": 4.3,
-    "ratings": [4, 5, 4, 4],
-    "reviews": ["Soft fabric", "Loved the fit", "Stylish for casual wear"],
-    "tag": "Trending",
-    "left": 3
+    ]
   },
+  
   {
     "title": "Leriya Fashion Kurta Set for Women | Ethnic Dress Kurti Set | Printed Dresses for Woman | Long Sleeve",
-    "category": "Women",
+    "category": "Women" ,
     "price": 569,
     "link": "https://amzn.to/448BHWG",
     "images": [
       "./image3/71DN60RPXWL._SX679_.jpg",
       "./image3/61coD7Qjq3L._SY879_.jpg",
-      "./image3/71NHDRuEfnL._SX679_.jpg",
-      "./image3/71u5okKdbPL._SX679_.jpg",
-      "./image3/61oLJMcpNgL._SY879_.jpg",
+      "./image3/71NHDRuEfnL._SX679_.jpg" ,
+      "./image3/71u5okKdbPL._SX679_.jpg" ,
+      "./image3/61oLJMcpNgL._SY879_.jpg" ,
       "./image3/queueiehsbakaos.jpg"
-    ],
-    "boughtThisMonth": 2012,
-    "avgRating": 4.6,
-    "ratings": [5, 5, 4, 4],
-    "reviews": ["Perfect festive wear", "Print quality is amazing"],
-    "tag": "Best Seller",
-    "left": 2
+      
+    ]
   },
   {
     "title": "Yash Gallery Women's Cotton Relaxed Fit Anarkali Kurta",
@@ -47,16 +37,14 @@
     "images": [
       "./image1/61pv6kWuitL._SX679_.jpg",
       "./image1/51QbcuBnNVL._SY879_.jpg",
-      "./image1/510Dz0EHpPL._SY879_.jpg",
+      "./image1/510Dz0EHpPL._SY879_.jpg" ,
       "./image1/513OOBn4NnL._SY879_.jpg"
-    ],
-    "boughtThisMonth": 1576,
-    "avgRating": 4.4,
-    "ratings": [5, 4, 5, 4],
-    "reviews": ["Light and comfy", "Perfect for office wear"],
-    "tag": "Top Rated",
-    "left": 4
+      
+    ]
   },
+  
+  
+  
   {
     "title": "Sun Fashion And Lifestyle Women's Chanderi Stitched Printed Kurta for Women",
     "category": "Fashion",
@@ -65,15 +53,10 @@
     "images": [
       "./image2/61VXwHSGEuL._SY879_.jpg",
       "./image2/61L2pT2F5fL.jpg",
-      "./image2/61hAHBjCIyL.jpg",
+      "./image2/61hAHBjCIyL.jpg" ,
       "./image2/61GZVNu.jpg"
-    ],
-    "boughtThisMonth": 989,
-    "avgRating": 4.1,
-    "ratings": [4, 3, 5, 4],
-    "reviews": ["Vibrant colors", "Slightly transparent but beautiful"],
-    "tag": "Editor's Pick",
-    "left": 5
+      
+    ]
   },
   {
     "title": "Stylish Men's Watch",
@@ -83,31 +66,7 @@
     "images": [
       "https://via.placeholder.com/300x200?text=Watch+1",
       "https://via.placeholder.com/300x200?text=Watch+2"
-    ],
-    "boughtThisMonth": 1283,
-    "avgRating": 4.7,
-    "ratings": [5, 5, 4, 5],
-    "reviews": ["Elegant design", "Goes well with formals"],
-    "tag": "Hot Deal",
-    "left": 1
-  },
-  {
-    "title": "FUNDAY FASHION Women Regular Fit Solid V Collered Casual Shirt (Pack of 2)",
-    "category": "mens",
-    "price": 459,
-    "link": "https://amzn.to/468LdLY",
-    "images": [
-      "./image1/61pv6kWuitL._SX679_.jpg",
-      "./image1/51QbcuBnNVL._SY879_.jpg",
-      "./image1/510Dz0EHpPL._SY879_.jpg",
-      "./image1/513OOBn4NnL._SY879_.jpg"
-    ],
-    "boughtThisMonth": 763,
-    "avgRating": 4.2,
-    "ratings": [4, 4, 5, 3],
-    "reviews": ["Good for office wear", "Colors are accurate"],
-    "tag": "Value Pick",
-    "left": 6
+    ]
   },
   {
     "title": "Yoga Mat - Premium",
@@ -118,12 +77,6 @@
       "https://via.placeholder.com/300x200?text=Yoga+1",
       "https://via.placeholder.com/300x200?text=Yoga+2",
       "https://via.placeholder.com/300x200?text=Yoga+3"
-    ],
-    "boughtThisMonth": 1132,
-    "avgRating": 4.8,
-    "ratings": [5, 4, 5, 5],
-    "reviews": ["Soft and anti-slip", "Perfect for daily practice"],
-    "tag": "Fitness Star",
-    "left": 3
-  }
     ]
+  }
+]
