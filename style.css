@@ -164,3 +164,14 @@ h1 {
   background-color: white; /* Brighter blue on hover */
   transform: scale(1.1);
   }
+.logo-top-left {
+  position: absolute;
+  top: 0pt ;
+  left: 0px ; 
+  padding: 10px;
+}
+
+.logo-top-left img {
+  height: 70px;
+  width: auto;
+  }
